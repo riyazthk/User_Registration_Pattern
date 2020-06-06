@@ -6,7 +6,7 @@ if [[ $fname =~ $pat]]
 then
 echo "$fname"
 else
-echo "frst character start with caps"
+echo "frst character start with caps and atleast 3 character"
 fi
 
 read lname
@@ -15,6 +15,14 @@ if [[ $lname =~ $pat]]
 then
 echo "$lname"
 else
-echo "frst character start with caps"
+echo "frst character start with caps and atleast 3 character"
 fi
 
+read phnum
+pat="^91[ ][0-9]{10}$"
+if [[ $phnum =~ $pat ]]
+then
+echo "$phnum"
+else
+echo "phone number have exact 10 digits and have space after country code"
+fi
