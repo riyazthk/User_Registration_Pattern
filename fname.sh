@@ -26,3 +26,12 @@ echo "$phnum"
 else
 echo "phone number have exact 10 digits and have space after country code"
 fi
+
+read email
+pat="^[a-zA-z][a-zA-Z0-9\.\$\_\-]*[@][a-z]*[.][a-z]{2,5}[.]in|org$"
+if [[ $email =~ $pat ]]
+then
+echo "$email"
+else
+echo "invalid email"
+fi
